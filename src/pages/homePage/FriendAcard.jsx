@@ -1,23 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
+import handleStatus from './handleStatus';
 
 const FriendAcard = ({friend}) => {
-     
-    const {name,picture,days_since_contact,status,tags} = friend;
+    
+    const {id,name,picture,days_since_contact,status,tags} = friend;
 
-    const handleStatus = (status) =>{
-        if(status === "Overdue"){
-            return "bg-red-500 text-white rounded-2xl px-2 py-1";
-        }
-        if(status === "Almost due"){
-            return "bg-amber-500 text-white rounded-2xl px-2 py-1";
-        }else{
-            return "bg-green-600 text-white rounded-2xl px-2 py-1"
-        }
-    }
 
     return (
-        <Link to="/timeline" className='bg-white shadow rounded-2xl p-5 text-center space-y-5 '>
+        <Link to={`/${id}`} className='bg-white shadow rounded-2xl p-5 text-center space-y-5 '>
             
             <div className='p-1 flex justify-center rounded-full border-2 border-gray-200 w-[60%] mx-auto'>
                  <img src={picture} alt={name} className='' />

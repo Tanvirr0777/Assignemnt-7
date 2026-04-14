@@ -1,14 +1,15 @@
 import React from 'react';
 import useFriend from '../../../hook/useFriend';
+import { GridLoader } from 'react-spinners';
 
 const Banner = () => {
     const {friend,loading} = useFriend();
 
-    //  if(loading){
-    //     return <div className="flex justify-center ">
-    //          <GridLoader color="green" />
-    //     </div>
-    //  }
+     if(loading){
+        return <div className="flex justify-center ">
+             <GridLoader color="green" />
+        </div>
+     }
      
     return (
         <div className='mt-15 text-center'>
