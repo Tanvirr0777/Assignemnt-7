@@ -8,6 +8,7 @@ import { MdTimer } from 'react-icons/md';
 import { ImStatsDots } from 'react-icons/im';
 
 const NavBar = () => {
+
     return (
         <div className='bg-white'>
             <nav className='flex justify-between gap-4 items-center 

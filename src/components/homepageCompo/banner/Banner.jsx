@@ -1,6 +1,15 @@
 import React from 'react';
+import useFriend from '../../../hook/useFriend';
 
 const Banner = () => {
+    const {friend,loading} = useFriend();
+
+    //  if(loading){
+    //     return <div className="flex justify-center ">
+    //          <GridLoader color="green" />
+    //     </div>
+    //  }
+     
     return (
         <div className='mt-15 text-center'>
             <div className='space-y-4'>
@@ -11,7 +20,7 @@ const Banner = () => {
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 justify-center my-15 w-[85%] mx-auto'>
 
                 <div className='bg-white p-10 shadow-lg rounded-xl'>
-                    <h2 className='text-2xl font-semibold'>10</h2>
+                    <h2 className='text-2xl font-semibold'>{friend.length}</h2>
                     <p>Total Friend</p>
                 </div>
                 <div className='bg-white p-10 shadow-lg rounded-xl'>
