@@ -6,16 +6,15 @@ const Footer = () => {
   return (
     <footer className="bg-[#1f4f43] text-white text-center py-16 px-6 my-10">
       
-      {/* Title */}
       <h1 className="text-5xl font-bold mb-4">KeenKeeper</h1>
 
-      {/* Subtitle */}
+     
       <p className="text-gray-300 max-w-2xl mx-auto mb-10">
         Your personal shelf of meaningful connections. Browse, tend, and nurture
         the relationships that matter most.
       </p>
 
-      {/* Social Links */}
+      
       <h3 className="text-lg font-semibold mb-4">Social Links</h3>
 
       <div className="flex justify-center gap-4 mb-10">
@@ -34,10 +33,10 @@ const Footer = () => {
 
       </div>
 
-      {/* Divider */}
+      
       <hr className="border-gray-500 opacity-30 mb-6" />
 
-      {/* Bottom Section */}
+  
       <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
         
         <p>© 2026 KeenKeeper. All rights reserved.</p>

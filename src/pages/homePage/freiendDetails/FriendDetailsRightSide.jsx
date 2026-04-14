@@ -1,12 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import { FaVideo } from 'react-icons/fa';
 import { IoIosText } from 'react-icons/io';
+import { FriendContext } from '../../../context/ContextCreate';
+import { toast } from 'react-toastify';
 
 const FriendDetailsRightSide = ({expectedFriend}) => {
+
     const {days_since_contact,goal,
           next_due_date} = expectedFriend;
+   
+    const {toTimeline,setToTimeLine, allTimeline,setAllTimeline} = useContext(FriendContext);
+    
+    const handlTimeLine = (type) =>{
 
+        const newEntry ={
+            ...expectedFriend,
+            medium : type,
+            date: new Date().toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+           })
+        };
+
+        const exist = toTimeline.some(item => item.id === newEntry.id);
+        
+        if(!exist){
+            setToTimeLine([...toTimeline,newEntry]);
+            setAllTimeline([...allTimeline,newEntry]);
+            toast.success(`${newEntry.medium} added with ${newEntry.name}`);
+        }else{
+            toast.warning(` ${newEntry.name} already added in timeline`)
+        }
+    };
+
+   // console.log(toTimeline);
     return (
         <div className='space-y-6'>
 
@@ -38,13 +67,13 @@ const FriendDetailsRightSide = ({expectedFriend}) => {
             <div className='bg-white rounded-xl px-4 py-6 space-y-4'>
                 <h2 className='text-xl font-bold '>Quick Check-In</h2>
                 <div className='grid grid-cols-2 text-center gap-4 md:grid-cols-3 '>
-                    <button className='btn p-3 h-25 rounded-xl flex flex-col  justify-center gap-2 text-xl'>
+                    <button className='btn p-3 h-25 rounded-xl flex flex-col  justify-center gap-2 text-xl' onClick={()=>handlTimeLine("call")}>
                         <BiSolidPhoneCall size={25} /> 
                         Call</button>
-                    <button className='btn p-3 h-25 rounded-xl flex flex-col  justify-center gap-2 text-xl'>
+                    <button className='btn p-3 h-25 rounded-xl flex flex-col  justify-center gap-2 text-xl' onClick={()=>handlTimeLine("text")}>
                         <IoIosText size={25} />
                         Text</button>
-                    <button className='btn p-3 h-25 rounded-xl flex flex-col  justify-center gap-2 text-xl'>
+                    <button className='btn p-3 h-25 rounded-xl flex flex-col  justify-center gap-2 text-xl' onClick={()=>handlTimeLine("video")}>
                         <FaVideo size={25} />
                         Video</button>
                 </div>

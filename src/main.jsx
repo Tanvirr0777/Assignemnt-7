@@ -4,11 +4,16 @@ import './index.css'
 import App from './App.jsx'
 import { RouterProvider } from 'react-router'
 import { router } from './routes/Router.jsx'
+import ContextProvider from './context/ContextProvider.jsx'
+import { ToastContainer } from 'react-toastify'
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ContextProvider >
+      <RouterProvider router={router} />
+      <ToastContainer position="top-center" />
+    </ContextProvider>
   </StrictMode>,
 )

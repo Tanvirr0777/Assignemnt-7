@@ -10,7 +10,7 @@ import { ImStatsDots } from 'react-icons/im';
 const NavBar = () => {
 
     return (
-        <div className='bg-white'>
+        <div className='bg-white sticky top-0'>
             <nav className='flex justify-between gap-4 items-center 
          shadow py-4 container mx-auto px-4 py-2'>
 

@@ -8,6 +8,8 @@ import { LuArchive } from 'react-icons/lu';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import FriendDetailsRightSide from './FriendDetailsRightSide';
 
+
+
 const FriendDetails = () => {
 
     const {id} = useParams();
@@ -15,7 +17,9 @@ const FriendDetails = () => {
     const {friend,loading} = useFriend();
    
    const expectedFriend = friend.find(expfirend => expfirend.id === parseInt(id) );
-   console.log(expectedFriend);
+   //console.log(expectedFriend);
+
+  
     
    if(loading){
         return <div className="flex justify-center ">
@@ -37,7 +41,7 @@ const FriendDetails = () => {
                      <h1 className='text-2xl font-bold'>{name}</h1>
                   </div>
 
-                  <div className='w-[40%] mx-auto px-3'>
+                  <div className='w-[50%] mx-auto px-3'>
                     <span className={handleStatus(status)}>{status}</span>
                   </div>
                  <div className='flex gap-3 justify-center'>
