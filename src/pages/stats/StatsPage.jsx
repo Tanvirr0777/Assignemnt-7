@@ -27,7 +27,7 @@ const StatsPage = () => {
     return (
         <div className='my-20 w-[75%] mx-auto'>
             <h2 className='text-4xl font-bold'>Friendship Analytics</h2>
-            <div className='bg-white p-3 px-5 my-3 rounded-xl'>
+            <div className='bg-white p-3 px-5  my-3 rounded-xl'>
                 <h2 className='text-xl'>By Interaction Type</h2>
 
           {
