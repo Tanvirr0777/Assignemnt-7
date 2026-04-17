@@ -37,9 +37,9 @@ const FriendDetailsRightSide = ({expectedFriend}) => {
 
    // console.log(toTimeline);
     return (
-        <div className='space-y-6'>
+        <div className=' space-y-6 '>
 
-            <div className='grid grid-cols-2 md:grid-cols-3 gap-3 justify-center w-[100%] mx-auto text-center'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-3 justify-center w-[100%] mx-auto text-center'>
 
                 <div className='bg-white p-10 shadow-lg rounded-xl'>
                     <h2 className='text-3xl font-semibold'>{days_since_contact}</h2>
@@ -56,8 +56,8 @@ const FriendDetailsRightSide = ({expectedFriend}) => {
             
             </div>
 
-            <div className='bg-white rounded-xl p-5 space-y-4 shadow-lg'>
-                <div className='flex justify-between items-center'>
+            <div className='bg-white rounded-xl p-5 space-y-4 shadow-lg w-40 md:w-[100%]'>
+                <div className=' flex flex-col md:flex-row justify-between items-center'>
                     <h2 className='text-xl font-bold'>Relationship Goal</h2>
                     <button className='btn'>Edit</button>
                 </div>
@@ -66,7 +66,7 @@ const FriendDetailsRightSide = ({expectedFriend}) => {
 
             <div className='bg-white rounded-xl px-4 py-6 space-y-4'>
                 <h2 className='text-xl font-bold '>Quick Check-In</h2>
-                <div className='grid grid-cols-2 text-center gap-4 md:grid-cols-3 '>
+                <div className='grid grid-cols-1 text-center gap-4 md:grid-cols-3 '>
                     <button className='btn p-3 h-25 rounded-xl flex flex-col  justify-center gap-2 text-xl' onClick={()=>handlTimeLine("call")}>
                         <BiSolidPhoneCall size={25} /> 
                         Call</button>

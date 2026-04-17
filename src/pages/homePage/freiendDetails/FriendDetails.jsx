@@ -33,7 +33,7 @@ const FriendDetails = () => {
     return (
         <div className='flex gap-10 my-10 m-2 space-y-4 items-start '>
                      
-        <div className='space-y-3'>
+        <div className='space-y-3 w-[45%]'>
              <div className='space-y-3 bg-white shadow text-center p-3 rounded-xl'>
                   
                   <div className='w-[80%] mx-auto'>
@@ -76,7 +76,7 @@ const FriendDetails = () => {
               </div>
              </div>
 
-            <div >
+            <div className='w-40 md:w-[60%]'>
                 <FriendDetailsRightSide expectedFriend={expectedFriend} />
             </div>
 
