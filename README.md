@@ -4,12 +4,12 @@ Friendship infinity is a platform where you can create a good connection to your
 
 
 Technologies used: 
-                 React.js
-                 tailwindCSS
+                 React.js ,
+                 tailwindCSS ,
                  daisyui
 
 
 Key features:
-            track on how you communicate with your friends
-            shows communication medium in a chart with compare
+            track on how you communicate with your friends ,
+            shows communication medium in a chart with compare ,
             user-friendly user interface 
